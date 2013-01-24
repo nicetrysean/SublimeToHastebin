@@ -1,9 +1,12 @@
 import urllib2
 import os
 import json
-
-
 import sublime, sublime_plugin
+
+## So here's all the code for my plugin.. pretty snazy ay?
+## Just be sure to mention my name when you're pasting this to your friends, and claiming it your own.
+
+## Written by s3anno /-/ Sean O'Dowd.
 
 PLUGIN_NAME = 'SendToHasteBin'
 
@@ -16,7 +19,6 @@ class SendToHasteBinCommand( sublime_plugin.TextCommand ):
 		finally: return name
 
 	def run(self, view, paste_name = None): 
-
 
 		settings = sublime.load_settings(PLUGIN_NAME + '.sublime-settings')
 		URL = settings.get('Hastebin-full-url')
