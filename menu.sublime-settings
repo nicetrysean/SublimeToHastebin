@@ -17,7 +17,7 @@
                         [
                             {
                                 "command": "Change HasteBin URL", 
-                                "args": {"file": "${packages}/GoToHasteBin/GoToHastebin.sublime-settings"},
+                                "args": {"file": "${packages}/GoToHasteBin/ToHastebin.sublime-settings"},
                                 "caption": "HasteBin URLs"
                             },
                             { "caption": "-" }

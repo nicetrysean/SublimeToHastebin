@@ -2,7 +2,7 @@
 	"schema_version": "1.0",
 	"packages": [
 		{
-			"name": "Sublime To HasteBin",
+			"name": "To HasteBin",
 			"description": "Copy code directly from sublime Text 2 into HasteBin with Syntax detection!",
 			"author": "Sean O'Dowd / s3anno",
 			"homepage": "https://github.com/s3anno/SublimeToHastebin",
