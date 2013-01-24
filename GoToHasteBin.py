@@ -8,7 +8,7 @@ import sublime, sublime_plugin
 
 ## Written by s3anno /-/ Sean O'Dowd.
 
-PLUGIN_NAME = 'SendToHasteBin'
+PLUGIN_NAME = 'GoToHasteBin'
 
 class SendToHasteBinCommand( sublime_plugin.TextCommand ):
 

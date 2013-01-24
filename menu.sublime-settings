@@ -1,0 +1,30 @@
+[
+    {
+        "caption": "Preferences",
+        "mnemonic": "n",
+        "id": "preferences",
+        "children":
+        [
+            {
+                "caption": "Package Settings",
+                "mnemonic": "P",
+                "id": "package-settings",
+                "children":
+                [
+                    {
+                        "caption": "GoTo HasteBin",
+                        "children":
+                        [
+                            {
+                                "command": "Change HasteBin URL", 
+                                "args": {"file": "${packages}/GoToHasteBin/GoToHastebin.sublime-settings"},
+                                "caption": "HasteBin URLs"
+                            },
+                            { "caption": "-" }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]
