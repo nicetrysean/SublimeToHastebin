@@ -22,9 +22,7 @@
                             },
                             {
                                 "command": "open_file",
-                                "args": {
-                                    "file": "${packages}/SublimeToHasteBin/Default.sublime-keymap",
-                                },
+                                "args": {"file": "${packages}/SublimeToHasteBin/Default.sublime-keymap"},
                                 "caption": "Key Bindings - Default"
                             }
                         ]
