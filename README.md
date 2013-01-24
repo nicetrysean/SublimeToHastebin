@@ -1,4 +1,4 @@
-#Sublime Text 2 To Hastebin 
+#Sublime Text To Hastebin 
 
 ---------------------
 A Sublime Text 2 plugin built to upload code directly from the editor to Hastebin.com with the correct syntax highlighting!
