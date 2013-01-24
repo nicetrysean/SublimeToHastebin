@@ -5,7 +5,7 @@ import json
 
 import sublime, sublime_plugin
 
-URL = 'http://hastebin.com/documents'
+PLUGIN_NAME = 'SendToHasteBin'
 
 class SendToHasteBinCommand( sublime_plugin.TextCommand ):
 
@@ -17,20 +17,24 @@ class SendToHasteBinCommand( sublime_plugin.TextCommand ):
 
 	def run(self, view, paste_name = None): 
 
+
+		settings = sublime.load_settings(PLUGIN_NAME + '.sublime-settings')
+		URL = settings.get('Hastebin-full-url')
+
 		for region in self.view.sel():
 
-			text = self.view.substr(region).encode('utf8')
-			if not text:
-				sublime.status_message('Error sending to HasteBin: Nothing selected')
+			if not region.empty():
+				content = self.view.substr(region).encode('utf8')
 			else:
-				req = urllib2.Request(URL, text)
-				response = urllib2.urlopen(req)
-				the_page = response.read()
-				key = json.loads(the_page)['key']
-				url = "http://hastebin.com/%s" % key
+				content = self.view.substr(sublime.Region(0, self.view.size())).encode('utf8')
+			req = urllib2.Request(URL, content)
+			response = urllib2.urlopen(req)
+			the_page = response.read()
+			key = json.loads(the_page)['key']
+			url = settings.get('Hastebin-short-url') + key
 
-				filename = self.get_file_name()
-				extension = os.path.splitext(filename)[1]
+			filename = self.get_file_name()
+			extension = os.path.splitext(filename)[1]
 
-				sublime.set_clipboard(url + extension)
-				sublime.status_message('Hastebin URL copied to clipboard: ' + url + extension)
+			sublime.set_clipboard(url + extension)
+			sublime.status_message('Hastebin URL copied to clipboard: ' + url + extension)

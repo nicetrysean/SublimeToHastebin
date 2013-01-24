@@ -1,3 +1,5 @@
 [
-  {  "keys": ["ctrl+alt+c"], "command": "send_to_haste_bin"  }
+  {  
+  	"keys": ["ctrl+alt+c"], "command": "send_to_haste_bin"
+  }
 ]
