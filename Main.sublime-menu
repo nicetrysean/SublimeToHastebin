@@ -17,12 +17,12 @@
                         [
                             {
                                 "command": "open_file", 
-                                "args": {"file": "${packages}/SublimeToHasteBin/ToHastebin.sublime-settings"},
+                                "args": {"file": "${packages}/To HasteBin/ToHastebin.sublime-settings"},
                                 "caption": "HasteBin URLs"
                             },
                             {
                                 "command": "open_file",
-                                "args": {"file": "${packages}/SublimeToHasteBin/Default.sublime-keymap"},
+                                "args": {"file": "${packages}/To HasteBin/Default.sublime-keymap"},
                                 "caption": "Key Bindings - Default"
                             }
                         ]
