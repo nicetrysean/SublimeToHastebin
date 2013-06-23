@@ -1,4 +1,7 @@
-import urllib2
+try:
+	import urllib2 as ulib
+except ImportError:
+	import urllib.request as ulib
 import os
 import json
 import sublime, sublime_plugin
@@ -6,7 +9,7 @@ import sublime, sublime_plugin
 ## So here's all the code for my plugin.. pretty snazy ay?
 ## Just be sure to mention my name when you're pasting this to your friends, and claiming it your own.
 
-## Written by s3anno /-/ Sean O'Dowd.
+## Written by nicetrysean /-/ Sean O'Dowd.
 
 PLUGIN_NAME = 'ToHasteBin'
 
@@ -29,10 +32,10 @@ class SendToHasteBinCommand( sublime_plugin.TextCommand ):
 				content = self.view.substr(region).encode('utf8')
 			else:
 				content = self.view.substr(sublime.Region(0, self.view.size())).encode('utf8')
-			req = urllib2.Request(URL, content)
-			response = urllib2.urlopen(req)
+			req = ulib.Request(URL, content)
+			response = ulib.urlopen(req)
 			the_page = response.read()
-			key = json.loads(the_page)['key']
+			key = json.loads(the_page.decode("utf8"))['key']
 			url = settings.get('Hastebin-short-url') + key
 
 			filename = self.get_file_name()
