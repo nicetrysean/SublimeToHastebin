@@ -1,6 +1,5 @@
   {  
-  	//Full URL is needed for -Key Generation-
-  	"Hastebin-full-url": "http://paste.c42/documents",
+  	"Hastebin-full-url": "http://hastebin.com/documents",
   	//Partial URL is only needed for compiling the -End URL-
-  	"Hastebin-short-url": "http://paste.c42/"
+  	"Hastebin-short-url": "http://hastebin.com/"
   }
